@@ -12,6 +12,7 @@ build:
     paths:
       - 'doc'
   script:
+          - sudo yum install -y libjpeg-devel zlib-devel python-devel
           - sudo yum install -y python2-pip
           - sudo pip install -q -r requirements.txt
           - bundle install --path=/cache
