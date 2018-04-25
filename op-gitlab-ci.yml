@@ -12,5 +12,7 @@ build:
     paths:
       - 'doc'
   script:
-          - rake docs:html
+          - bundle install --path=/cache
+          - bundle update
+          - bundle exec rake docs:html
 
