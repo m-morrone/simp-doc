@@ -1,0 +1,16 @@
+stages:
+  - build
+cache:
+  paths:
+  - vendor
+build:
+  stage: build
+  tags:
+    - docker
+  image: simpproject/centos:7-ruby24
+  artifacts:
+    paths:
+      - 'doc'
+  script:
+          - rake docs:html
+
