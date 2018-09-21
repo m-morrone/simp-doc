@@ -30,7 +30,7 @@ To determine what version of autofs is installed, run ``automount -V``.
 To force the package to the version wanted despite the fact that a newer version is available:
 
 First make sure the package is available via your package-management facility then
-set the package version in hiera:
+set the package version in Hiera:
 
 In CentOS 7.4:
 
@@ -55,11 +55,12 @@ tracked.
 
 If you have any further questions about this please contact the SIMP Team.
 
-Autofs Option in nfs::client::mount
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Autofs Option in ``nfs::client::mount``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The autofs option in nfs::client::mount resource currently only works with indirect wild-card
-mounts.  For all other autofs options use the autofs module directly.
+The autofs option in ``nfs::client::mount`` resource currently only works with 
+indirect wild-card mounts.  For all other autofs options use the autofs module
+directly.
 
 SIMP-2944 in `JIRA Bug Tracking`_.
 
@@ -203,7 +204,7 @@ Utilize the SIMP profile module ``simp_nfs``:
 
    The NFS daemon may take time to reload after module application.  If your
    users do not have home directories immediately after application or it takes
-   a while to log in, don't panic!
+   a while to log in, do not panic!
 
 .. NOTE::
 
@@ -253,7 +254,7 @@ following, in the server's :term:`YAML` file:
 
   nfs::client::stunnel::nfs_server: <your nfs server>
 
-If ``simp_options::stunnel`` is set to ``false`` and you don't wish to globally
+If ``simp_options::stunnel`` is set to ``false`` and you do not wish to globally
 enable stunnel, you will also need to set the following, in default.yaml:
 
 .. code-block:: yaml
@@ -263,7 +264,7 @@ enable stunnel, you will also need to set the following, in default.yaml:
 Disable
 ^^^^^^^
 
-If ``simp_options::stunnel`` is set to ``true``, but you don't want your NFS
+If ``simp_options::stunnel`` is set to ``true``, but you do not want your NFS
 traffic to go through stunnel, set the following, in default.yaml:
 
 .. code-block:: yaml

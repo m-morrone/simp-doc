@@ -27,12 +27,12 @@ To begin, install the following Puppet modules:
    }
 
 
-Create A Workstation Profile Class
+Create a Workstation Profile Class
 ----------------------------------
 
 Below is an example class,
 ``/etc/puppetlabs/code/environments/simp/modules/site/manifests/workstation.pp``, that could be
-set up a user workstation.  Each ``site::`` class is described in the subsequent sections.
+set up on a user workstation.  Each ``site::`` class is described in the subsequent sections.
 
 .. code-block:: ruby
 
@@ -114,7 +114,7 @@ repositories.
 
    class site::repos {
      yumrepo { 'myrepo':
-       #what ever parameters you need
+       #whatever parameters you need
      }
    }
 
@@ -129,7 +129,7 @@ for allowing virtualization on a system.
 .. code-block:: ruby
 
    # We allow users to run VMs on their workstations.
-   # If you don't want this, just don't include this class.
+   # If you do not want this, just do not include this class.
    # If this is installed, VM creation and management is still limited by PolicyKit
 
    class site::virt {
@@ -168,7 +168,7 @@ for allowing virtualization on a system.
 
    }
 
-To set swappiness values use hiera:
+To set swappiness values use Hiera:
 
 .. code-block:: yaml
 
@@ -218,7 +218,7 @@ print server.
    class site::print::server {
 
      # Note, this is *not* set up for being a central print server.
-     # You'll need to add the appropriate IPTables rules for that to work.
+     # You will need to add the appropriate IPTables rules for that to work.
      package { 'cups': ensure => 'latest' }
 
      service { 'cups':
@@ -231,7 +231,7 @@ print server.
    }
 
 
-Create A Workstation Hostgroup
+Create a Workstation Hostgroup
 ------------------------------
 
 Edit the ``site.pp`` file to create a hostgroup for the workstations.  The
@@ -402,7 +402,7 @@ up the tunnel.
 
      This command takes the user to the VNC server.
 
-Table: Set Up SSH Tunnel Procedure
+Table: Set up SSH Tunnel Procedure
 
 .. NOTE::
 
@@ -411,7 +411,7 @@ Table: Set Up SSH Tunnel Procedure
    references below to 590\ *<Port Number>* become 5906.
 
 
-Set Up Clients
+Set up Clients
 """"""""""""""
 
 On ``vclnt.your.domain``, type ``vncviewer localhost:590\ ***<Port
